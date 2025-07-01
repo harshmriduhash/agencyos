@@ -24,10 +24,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="min-h-screen bg-gray-50 text-gray-900">
+        {/* Topbar placeholder */}
+        <div className="sticky top-0 z-30 h-16 bg-white border-b flex items-center px-4 shadow-sm">
+          <span className="font-bold text-lg">AgencyOS</span>
+          {/* TODO: Add Topbar component here */}
+        </div>
+        <div className="flex min-h-[calc(100vh-4rem)]">
+          {/* Sidebar placeholder */}
+          <aside className="hidden md:block w-64 bg-white border-r p-4">
+            {/* TODO: Add Sidebar component here */}
+            <div className="font-semibold mb-4">Sidebar</div>
+            <ul className="space-y-2 text-gray-700">
+              <li>Dashboard</li>
+              <li>Proposals</li>
+              <li>Project</li>
+              <li>Invoices</li>
+              <li>Documents</li>
+              <li>Settings</li>
+            </ul>
+          </aside>
+          <main className="flex-1 p-4 md:p-8">{children}</main>
+        </div>
       </body>
     </html>
   );
