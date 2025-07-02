@@ -23,13 +23,13 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Topbar />
       <div className="flex flex-1 min-h-0">
-        <aside className="hidden md:block w-64 bg-white border-r p-4">
+        <aside className="hidden md:block w-64 bg-card border-r p-4">
           <Sidebar />
         </aside>
-        <main className="flex-1 p-4 md:p-8 overflow-y-auto">{children}</main>
+        <main className="flex-1 p-4 md:p-8 overflow-y-auto bg-background text-foreground">{children}</main>
       </div>
     </div>
   );
